@@ -10,15 +10,15 @@
     <div class="d-flex flex-row flex-wrap">
         @foreach(var person in Model.Results)
         {
-            <div class="item-container">
-                <div class="item">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item-container">
+                <a asp-action="Person" asp-route-id="@person.Id" class="item">
                     <h4>@person.Name</h4>
                     <div class="item-traits">
                         <p>Mass: @person.Mass</p>
                         <p>Height: @person.Height</p>
                         <p>Born: @person.BirthYear</p>
                     </div>
-                </div>
+                </a>
             </div>
         }
     </div>
